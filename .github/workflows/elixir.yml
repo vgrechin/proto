@@ -22,6 +22,8 @@ jobs:
       run: mix deps.get
     - name: Run Tests
       run: mix test --no-start
+    - name: Prepare release files
+      run: MIX_ENV=prod mix release
     - name: Archive distribution
       run: cd _build/prod/rel && 7z a proto.7z proto
     - uses: actions/upload-artifact@v1
