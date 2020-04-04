@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"></meta>
+    <title>Google protobuf web-socket client</title>
+    <script src="//cdn.rawgit.com/dcodeIO/ByteBuffer.js/4.0.0/dist/ByteBufferAB.js"></script>
+    <script src="//cdn.rawgit.com/dcodeIO/ProtoBuf.js/4.0.0/dist/ProtoBuf.js"></script>
+    <script type="text/javascript">
+      $( document ).ready( main )
+
+      show( 'Main' );
+
+      function main()
+      {
+        show( 'Start' );
+        if( window.WebSocket )
+        {
+          connect();
+        }
+        else
+        {
+          show( 'Websockets are not supported' );
+          $( "#control" ).hide();
+        }
+      }
+
+      function connect()
+      {
+        var ProtoBuf = dcodeIO.ProtoBuf;
+        var builder = ProtoBuf.loadJsonFile( "ticker.json" );
+
+        var data = document.getElementByid( "fileData" );
+        var conn = $.extend( new WebSocket( "ws://" + location.host + "/proto"),
+        {
+            onopen: function() {open()}
+          , onclose: function( event ){reconnect()}
+          , onerror: function( event ){reconnect()}
+          , onmessage: function( event ){decode()}
+        } );
+      }
+      function open()
+      {
+        if( conn.readyState == websocket.OPEN )
+          show( 'websocket connected' )
+        else
+          show( 'websocket failed to connect' )
+      }
+
+      function reconnect()
+      {
+        show( 'websocket disconnected' )
+        setTimeout( this.connect, 1000 );
+      }
+
+      function send()
+      {
+        if( conn.readyState != websocket.OPEN )
+        {
+          show( 'websocket closed' )
+        }
+        else
+        {
+          show( 'Sending message...' );
+          conn.send( message );
+          conn.binaryType = "arraybuffer";
+        }
+      }
+
+      function decode( event )
+      {
+        var Ticker = builder.build( "Ticker" );
+        var message = Ticker.decode( event.data );
+        show( message );
+      }
+
+      function show( message ){$( '#output' ).html( message )}
+    </script>
+  <head>
+  <body>
+    <div id="control">
+      <input type='text' id="message"/>
+      <button type="buton" onclick="send($(#message).val());">send</button>
+    </div>
+    <div id="output"></div>
+  </body>
+</html>

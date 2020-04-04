@@ -1,0 +1,1257 @@
+{
+  "file_to_generate": [
+    "ticker.proto"
+  ],
+  "proto_file": [
+    {
+      "name": "google/protobuf/timestamp.proto",
+      "package": "google.protobuf",
+      "message_type": [
+        {
+          "name": "Timestamp",
+          "field": [
+            {
+              "name": "seconds",
+              "number": 1,
+              "label": 1,
+              "type": 3,
+              "json_name": "seconds"
+            },
+            {
+              "name": "nanos",
+              "number": 2,
+              "label": 1,
+              "type": 5,
+              "json_name": "nanos"
+            }
+          ]
+        }
+      ],
+      "options": {
+        "java_package": "com.google.protobuf",
+        "java_outer_classname": "TimestampProto",
+        "java_multiple_files": true,
+        "go_package": "github.com/golang/protobuf/ptypes/timestamp",
+        "cc_enable_arenas": true,
+        "objc_class_prefix": "GPB",
+        "csharp_namespace": "Google.Protobuf.WellKnownTypes"
+      },
+      "source_code_info": {
+        "location": [
+          {
+            "span": [
+              30,
+              0,
+              132,
+              1
+            ]
+          },
+          {
+            "path": [
+              12
+            ],
+            "span": [
+              30,
+              0,
+              18
+            ],
+            "leading_detached_comments": [
+              " Protocol Buffers - Google's data interchange format\n Copyright 2008 Google Inc.  All rights reserved.\n https://developers.google.com/protocol-buffers/\n\n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the following conditions are\n met:\n\n     * Redistributions of source code must retain the above copyright\n notice, this list of conditions and the following disclaimer.\n     * Redistributions in binary form must reproduce the above\n copyright notice, this list of conditions and the following disclaimer\n in the documentation and/or other materials provided with the\n distribution.\n     * Neither the name of Google Inc. nor the names of its\n contributors may be used to endorse or promote products derived from\n this software without specific prior written permission.\n\n THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
+            ]
+          },
+          {
+            "path": [
+              2
+            ],
+            "span": [
+              32,
+              8,
+              23
+            ]
+          },
+          {
+            "path": [
+              8
+            ],
+            "span": [
+              34,
+              0,
+              59
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              0
+            ],
+            "span": [
+              34,
+              0,
+              59
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              0,
+              2
+            ],
+            "span": [
+              34,
+              7,
+              23
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              0,
+              2,
+              0
+            ],
+            "span": [
+              34,
+              7,
+              23
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              0,
+              2,
+              0,
+              1
+            ],
+            "span": [
+              34,
+              7,
+              23
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              0,
+              7
+            ],
+            "span": [
+              34,
+              26,
+              58
+            ]
+          },
+          {
+            "path": [
+              8
+            ],
+            "span": [
+              35,
+              0,
+              31
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              1
+            ],
+            "span": [
+              35,
+              0,
+              31
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              1,
+              2
+            ],
+            "span": [
+              35,
+              7,
+              23
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              1,
+              2,
+              0
+            ],
+            "span": [
+              35,
+              7,
+              23
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              1,
+              2,
+              0,
+              1
+            ],
+            "span": [
+              35,
+              7,
+              23
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              1,
+              3
+            ],
+            "span": [
+              35,
+              26,
+              30
+            ]
+          },
+          {
+            "path": [
+              8
+            ],
+            "span": [
+              36,
+              0,
+              66
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              2
+            ],
+            "span": [
+              36,
+              0,
+              66
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              2,
+              2
+            ],
+            "span": [
+              36,
+              7,
+              17
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              2,
+              2,
+              0
+            ],
+            "span": [
+              36,
+              7,
+              17
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              2,
+              2,
+              0,
+              1
+            ],
+            "span": [
+              36,
+              7,
+              17
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              2,
+              7
+            ],
+            "span": [
+              36,
+              20,
+              65
+            ]
+          },
+          {
+            "path": [
+              8
+            ],
+            "span": [
+              37,
+              0,
+              44
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              3
+            ],
+            "span": [
+              37,
+              0,
+              44
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              3,
+              2
+            ],
+            "span": [
+              37,
+              7,
+              19
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              3,
+              2,
+              0
+            ],
+            "span": [
+              37,
+              7,
+              19
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              3,
+              2,
+              0,
+              1
+            ],
+            "span": [
+              37,
+              7,
+              19
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              3,
+              7
+            ],
+            "span": [
+              37,
+              22,
+              43
+            ]
+          },
+          {
+            "path": [
+              8
+            ],
+            "span": [
+              38,
+              0,
+              47
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              4
+            ],
+            "span": [
+              38,
+              0,
+              47
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              4,
+              2
+            ],
+            "span": [
+              38,
+              7,
+              27
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              4,
+              2,
+              0
+            ],
+            "span": [
+              38,
+              7,
+              27
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              4,
+              2,
+              0,
+              1
+            ],
+            "span": [
+              38,
+              7,
+              27
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              4,
+              7
+            ],
+            "span": [
+              38,
+              30,
+              46
+            ]
+          },
+          {
+            "path": [
+              8
+            ],
+            "span": [
+              39,
+              0,
+              34
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              5
+            ],
+            "span": [
+              39,
+              0,
+              34
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              5,
+              2
+            ],
+            "span": [
+              39,
+              7,
+              26
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              5,
+              2,
+              0
+            ],
+            "span": [
+              39,
+              7,
+              26
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              5,
+              2,
+              0,
+              1
+            ],
+            "span": [
+              39,
+              7,
+              26
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              5,
+              3
+            ],
+            "span": [
+              39,
+              29,
+              33
+            ]
+          },
+          {
+            "path": [
+              8
+            ],
+            "span": [
+              40,
+              0,
+              33
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              6
+            ],
+            "span": [
+              40,
+              0,
+              33
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              6,
+              2
+            ],
+            "span": [
+              40,
+              7,
+              24
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              6,
+              2,
+              0
+            ],
+            "span": [
+              40,
+              7,
+              24
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              6,
+              2,
+              0,
+              1
+            ],
+            "span": [
+              40,
+              7,
+              24
+            ]
+          },
+          {
+            "path": [
+              8,
+              999,
+              6,
+              7
+            ],
+            "span": [
+              40,
+              27,
+              32
+            ]
+          },
+          {
+            "path": [
+              4,
+              0
+            ],
+            "span": [
+              120,
+              0,
+              132,
+              1
+            ],
+            "leading_comments": " A Timestamp represents a point in time independent of any time zone\n or calendar, represented as seconds and fractions of seconds at\n nanosecond resolution in UTC Epoch time. It is encoded using the\n Proleptic Gregorian Calendar which extends the Gregorian calendar\n backwards to year one. It is encoded assuming all minutes are 60\n seconds long, i.e. leap seconds are \"smeared\" so that no leap second\n table is needed for interpretation. Range is from\n 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z.\n By restricting to that range, we ensure that we can convert to\n and from  RFC 3339 date strings.\n See [https://www.ietf.org/rfc/rfc3339.txt](https://www.ietf.org/rfc/rfc3339.txt).\n\n # Examples\n\n Example 1: Compute Timestamp from POSIX `time()`.\n\n     Timestamp timestamp;\n     timestamp.set_seconds(time(NULL));\n     timestamp.set_nanos(0);\n\n Example 2: Compute Timestamp from POSIX `gettimeofday()`.\n\n     struct timeval tv;\n     gettimeofday(\u0026tv, NULL);\n\n     Timestamp timestamp;\n     timestamp.set_seconds(tv.tv_sec);\n     timestamp.set_nanos(tv.tv_usec * 1000);\n\n Example 3: Compute Timestamp from Win32 `GetSystemTimeAsFileTime()`.\n\n     FILETIME ft;\n     GetSystemTimeAsFileTime(\u0026ft);\n     UINT64 ticks = (((UINT64)ft.dwHighDateTime) \u003c\u003c 32) | ft.dwLowDateTime;\n\n     // A Windows tick is 100 nanoseconds. Windows epoch 1601-01-01T00:00:00Z\n     // is 11644473600 seconds before Unix epoch 1970-01-01T00:00:00Z.\n     Timestamp timestamp;\n     timestamp.set_seconds((INT64) ((ticks / 10000000) - 11644473600LL));\n     timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));\n\n Example 4: Compute Timestamp from Java `System.currentTimeMillis()`.\n\n     long millis = System.currentTimeMillis();\n\n     Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)\n         .setNanos((int) ((millis % 1000) * 1000000)).build();\n\n\n Example 5: Compute Timestamp from current time in Python.\n\n     timestamp = Timestamp()\n     timestamp.GetCurrentTime()\n\n # JSON Mapping\n\n In JSON format, the Timestamp type is encoded as a string in the\n [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format. That is, the\n format is \"{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z\"\n where {year} is always expressed using four digits while {month}, {day},\n {hour}, {min}, and {sec} are zero-padded to two digits each. The fractional\n seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution),\n are optional. The \"Z\" suffix indicates the timezone (\"UTC\"); the timezone\n is required, though only UTC (as indicated by \"Z\") is presently supported.\n\n For example, \"2017-01-15T01:30:15.01Z\" encodes 15.01 seconds past\n 01:30 UTC on January 15, 2017.\n\n In JavaScript, one can convert a Date object to this format using the\n standard [toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString]\n method. In Python, a standard `datetime.datetime` object can be converted\n to this format using [`strftime`](https://docs.python.org/2/library/time.html#time.strftime)\n with the time format spec '%Y-%m-%dT%H:%M:%S.%fZ'. Likewise, in Java, one\n can use the Joda Time's [`ISODateTimeFormat.dateTime()`](\n http://www.joda.org/joda-time/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime--)\n to obtain a formatter capable of generating timestamps in this format.\n\n\n"
+          },
+          {
+            "path": [
+              4,
+              0,
+              1
+            ],
+            "span": [
+              120,
+              8,
+              17
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              0
+            ],
+            "span": [
+              125,
+              2,
+              20
+            ],
+            "leading_comments": " Represents seconds of UTC time since Unix epoch\n 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to\n 9999-12-31T23:59:59Z inclusive.\n"
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              0,
+              4
+            ],
+            "span": [
+              125,
+              2,
+              120,
+              19
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              0,
+              5
+            ],
+            "span": [
+              125,
+              2,
+              7
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              0,
+              1
+            ],
+            "span": [
+              125,
+              8,
+              15
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              0,
+              3
+            ],
+            "span": [
+              125,
+              18,
+              19
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              1
+            ],
+            "span": [
+              131,
+              2,
+              18
+            ],
+            "leading_comments": " Non-negative fractions of a second at nanosecond resolution. Negative\n second values with fractions must still have non-negative nanos values\n that count forward in time. Must be from 0 to 999,999,999\n inclusive.\n"
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              1,
+              4
+            ],
+            "span": [
+              131,
+              2,
+              125,
+              20
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              1,
+              5
+            ],
+            "span": [
+              131,
+              2,
+              7
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              1,
+              1
+            ],
+            "span": [
+              131,
+              8,
+              13
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              1,
+              3
+            ],
+            "span": [
+              131,
+              16,
+              17
+            ]
+          }
+        ]
+      },
+      "syntax": "proto3"
+    },
+    {
+      "name": "ticker.proto",
+      "package": "basket",
+      "dependency": [
+        "google/protobuf/timestamp.proto"
+      ],
+      "message_type": [
+        {
+          "name": "Ticker",
+          "field": [
+            {
+              "name": "symbol",
+              "number": 1,
+              "label": 1,
+              "type": 9,
+              "json_name": "symbol"
+            },
+            {
+              "name": "price",
+              "number": 2,
+              "label": 1,
+              "type": 1,
+              "json_name": "price"
+            },
+            {
+              "name": "volume",
+              "number": 3,
+              "label": 1,
+              "type": 5,
+              "json_name": "volume"
+            },
+            {
+              "name": "timestamp",
+              "number": 4,
+              "label": 1,
+              "type": 11,
+              "type_name": ".google.protobuf.Timestamp",
+              "json_name": "timestamp"
+            },
+            {
+              "name": "error",
+              "number": 100,
+              "label": 1,
+              "type": 9,
+              "json_name": "error"
+            }
+          ]
+        }
+      ],
+      "source_code_info": {
+        "location": [
+          {
+            "span": [
+              0,
+              0,
+              13,
+              2
+            ]
+          },
+          {
+            "path": [
+              12
+            ],
+            "span": [
+              0,
+              0,
+              18
+            ]
+          },
+          {
+            "path": [
+              2
+            ],
+            "span": [
+              2,
+              8,
+              14
+            ]
+          },
+          {
+            "path": [
+              3,
+              0
+            ],
+            "span": [
+              4,
+              7,
+              40
+            ]
+          },
+          {
+            "path": [
+              4,
+              0
+            ],
+            "span": [
+              6,
+              0,
+              13,
+              1
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              1
+            ],
+            "span": [
+              6,
+              8,
+              14
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              0
+            ],
+            "span": [
+              8,
+              2,
+              20
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              0,
+              4
+            ],
+            "span": [
+              8,
+              2,
+              7,
+              1
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              0,
+              5
+            ],
+            "span": [
+              8,
+              2,
+              8
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              0,
+              1
+            ],
+            "span": [
+              8,
+              9,
+              15
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              0,
+              3
+            ],
+            "span": [
+              8,
+              18,
+              19
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              1
+            ],
+            "span": [
+              9,
+              2,
+              19
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              1,
+              4
+            ],
+            "span": [
+              9,
+              2,
+              8,
+              20
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              1,
+              5
+            ],
+            "span": [
+              9,
+              2,
+              8
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              1,
+              1
+            ],
+            "span": [
+              9,
+              9,
+              14
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              1,
+              3
+            ],
+            "span": [
+              9,
+              17,
+              18
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              2
+            ],
+            "span": [
+              10,
+              2,
+              19
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              2,
+              4
+            ],
+            "span": [
+              10,
+              2,
+              9,
+              19
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              2,
+              5
+            ],
+            "span": [
+              10,
+              2,
+              7
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              2,
+              1
+            ],
+            "span": [
+              10,
+              8,
+              14
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              2,
+              3
+            ],
+            "span": [
+              10,
+              17,
+              18
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              3
+            ],
+            "span": [
+              11,
+              2,
+              42
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              3,
+              4
+            ],
+            "span": [
+              11,
+              2,
+              10,
+              19
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              3,
+              6
+            ],
+            "span": [
+              11,
+              2,
+              27
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              3,
+              1
+            ],
+            "span": [
+              11,
+              28,
+              37
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              3,
+              3
+            ],
+            "span": [
+              11,
+              40,
+              41
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              4
+            ],
+            "span": [
+              12,
+              2,
+              21
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              4,
+              4
+            ],
+            "span": [
+              12,
+              2,
+              11,
+              42
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              4,
+              5
+            ],
+            "span": [
+              12,
+              2,
+              8
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              4,
+              1
+            ],
+            "span": [
+              12,
+              9,
+              14
+            ]
+          },
+          {
+            "path": [
+              4,
+              0,
+              2,
+              4,
+              3
+            ],
+            "span": [
+              12,
+              17,
+              20
+            ]
+          }
+        ]
+      },
+      "syntax": "proto3"
+    }
+  ],
+  "compiler_version": {
+    "major": 3,
+    "minor": 5,
+    "patch": 1,
+    "suffix": ""
+  }
+}
