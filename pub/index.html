@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"></meta>
+    <title>Google protobuf web-socket client</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bytebuffer@5.0.1/dist/bytebuffer.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/dcodeIO/protobuf.js/6.8.6/dist/protobuf.min.js"></script>
+    <script type="text/javascript">
+      $( document ).ready( main )
+
+      function main()
+      {
+        if( window.WebSocket )
+        {
+          connect();
+        }
+        else
+        {
+          show( 'Websockets are not supported' );
+          $( "#control" ).hide();
+        }
+      }
+
+      function connect()
+      {
+        var Ticker = null;
+        protobuf.load( "ticker.proto" ).then( function( root )
+        {
+            if( root )
+              Ticker = root.lookupType( "basket.Ticker" );
+        } );
+        websocket = $.extend( new WebSocket( "ws://127.0.0.1:3040/proto"),
+        {
+            onopen: function(){show( 'websocket connected' );}
+          , onclose: function( event ){reconnect();}
+          , onerror: function( event ){reconnect();}
+          , onmessage: function( event ){decode( event );}
+        } );
+      }
+
+      function reconnect()
+      {
+        show( 'websocket disconnected' );
+        setTimeout( this.connect, 1000 );
+      }
+
+      function send( message )
+      {
+        websocket.send( message );
+        websocket.binaryType = "arraybuffer";
+        show( 'sending message...' );
+      }
+
+      function decode( event )
+      {
+        //var message = Ticker.decode( event.data );
+        show( 'server sent: ' + event.data );
+      }
+
+      function show( message ){$( '#output' ).html( message );}
+    </script>
+  <head>
+  <body>
+    <div id="control">
+      <input type='text' id="message"/>
+      <button type="buton" onclick="send($('#message').val());">send</button>
+    </div>
+    <div id="output"></div>
+  </body>
+</html>

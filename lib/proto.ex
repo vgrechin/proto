@@ -1,18 +1,15 @@
 defmodule Proto do
-  @moduledoc """
-  Documentation for `Proto`.
-  """
+  use Application
 
-  @doc """
-  Hello world.
+  def start( _type, _args ) do
+    dispatch = :cowboy_router.compile( [{:_, [
+      {"/proto", Proto.WebSocket.Handler, []},
+      {"/ticker.proto", :cowboy_static, {:file, "pub/ticker.proto"}},
+      {"/", :cowboy_static, {:file, "pub/index.html"}}
+    ]}] )
 
-  ## Examples
-
-      iex> Proto.hello()
-      :world
-
-  """
-  def hello do
-    :world
+    :cowboy.start_clear( :http,
+      [{:port, 3040}],
+      %{env: %{dispatch: dispatch}} )
   end
 end
