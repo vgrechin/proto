@@ -2,7 +2,7 @@ defmodule ProtoTest do
   use ExUnit.Case
   doctest Proto
 
-  test "greets the world" do
-    assert Proto.hello() == :world
+  test "the truth" do
+    assert true
   end
 end
