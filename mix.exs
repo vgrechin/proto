@@ -24,7 +24,7 @@ defmodule Proto.MixProject do
     [
       {:cowboy, github: "extend/cowboy"},
       {:mimetypes, github: "spawngrid/mimetypes"},
-      {:protobuf, github: "tony612/protobuf-elixir"}
+      {:exprotobuf, github: "bitwalker/exprotobuf"}
     ]
   end
 end
