@@ -6,7 +6,7 @@ defmodule Proto.WebSocket.Handler do
   end
 
   def websocket_init( _state ) do
-    send_messages( self() )
+    #send_messages( self() )
     {:ok, %{}}
   end
 
@@ -30,7 +30,9 @@ defmodule Proto.WebSocket.Handler do
 
   def websocket_handle( {:text, message}, state ) do
     IO.inspect( message, label: "Handle" )
-    {:reply, {:text, "response to #{message} from client"}, state}
+    ticker = Proto.ticker
+    IO.inspect( ticker, label: "Ticker")
+    {:reply, {:binary, ticker}, state}
   end
 
   def websocket_handle( {:json, json}, state ) do

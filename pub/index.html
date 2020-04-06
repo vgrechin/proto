@@ -24,18 +24,19 @@
 
       function connect()
       {
-        var Ticker = null;
-        protobuf.load( "ticker.proto" ).then( function( root )
+        protobuf.load( "ticker.proto", function( err, root )
         {
-            if( root )
-              Ticker = root.lookupType( "basket.Ticker" );
-        } );
-        websocket = $.extend( new WebSocket( "ws://127.0.0.1:3040/proto"),
-        {
-            onopen: function(){show( 'websocket connected' );}
-          , onclose: function( event ){reconnect();}
-          , onerror: function( event ){reconnect();}
-          , onmessage: function( event ){decode( event );}
+          if( root )
+          {
+            Proto = $.extend( new WebSocket( "ws://127.0.0.1:3040/proto"),
+            {
+                Ticker: root.lookupType( "basket.Ticker" )
+              , onopen: function(){show( 'websocket connected' );}
+              , onclose: function( event ){reconnect();}
+              , onerror: function( event ){reconnect();}
+              , onmessage: function( event ){decode( event );}
+            } );
+          }
         } );
       }
 
@@ -47,15 +48,18 @@
 
       function send( message )
       {
-        websocket.send( message );
-        websocket.binaryType = "arraybuffer";
+        Proto.send( message );
         show( 'sending message...' );
       }
 
       function decode( event )
       {
-        //var message = Ticker.decode( event.data );
-        show( 'server sent: ' + event.data );
+        event.data.arrayBuffer().then( function( buffer )
+        {
+          var array = new Uint8Array( buffer );
+          var ticker = Proto.Ticker.decode( array );
+          show( 'server sent: ' + ticker.symbol );
+        } );
       }
 
       function show( message ){$( '#output' ).html( message );}
